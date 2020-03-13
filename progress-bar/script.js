@@ -25,5 +25,5 @@ progressBar.addEventListener('change', () => {
   setTimeout(() => {
     progressLevel.style.opacity = 0;
     progressBar.style.boxShadow = '0 5px 15px rgba(255, 255, 255, 0)';
-  }, 1000);
+  }, 1500);
 });
