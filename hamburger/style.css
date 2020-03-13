@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(53, 53, 53);
+}
+
+.contatiner {
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  margin: auto;
+}
+
+.icon span {
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background-color: rgb(233, 21, 102);
+  border-radius: 9px;
+  transition: 0.25s ease-in-out all;
+}
+
+/* lines positioning */
+.icon span:nth-child(1) {
+  top: 0;
+}
+
+.icon span:nth-child(2) {
+  top: 18px;
+}
+
+.icon span:nth-child(3) {
+  top: 36px;
+}
+
+/* animation */
+.icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 18px;
+}
+
+.icon.open span:nth-child(2) {
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 18px;
+}
