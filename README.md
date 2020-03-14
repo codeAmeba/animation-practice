@@ -1,2 +1,2 @@
-# animation-practice
+# front-end-practice
 HTML, CSS, JavaScript
