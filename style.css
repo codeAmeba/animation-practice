@@ -13,12 +13,12 @@ body {
   font-size: 18px;
   line-height: 45px;
   text-align: center;
-  padding-right: 40px;
 }
 
 .practice-item {
   font-size: 22px;
   transition: font-size 0.2s, font-weight 0.2s, color 0.2s;
+  padding-right: 40px;
 }
 
 .practice-item:hover {
@@ -30,10 +30,14 @@ body {
 .header {
   position: fixed;
   height: 100%;
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.icons {
+  padding-left: 10px;
+  font-size: 0.8em;
 }
 
 .icons-item {
