@@ -45,3 +45,15 @@ i:hover {
   color: rgb(223, 18, 114);
 }
 
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin: 5px auto;
+}
+
+.copyright {
+  font-size: 0.8em;
+  opacity: 0.4;
+}
+
