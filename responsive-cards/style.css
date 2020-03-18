@@ -1,0 +1,86 @@
+.card {
+  max-width: 200px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  margin-right: 25px;
+  transition: 0.2s ease-in-out;
+}
+
+.card .card-header {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.col-1.card .card-header {
+  background: url('https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80') no-repeat center center / cover;
+}
+
+.col-2.card .card-header {
+  background: url('https://images.unsplash.com/photo-1552840253-b19267dbe6fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60') no-repeat center center / cover;
+}
+
+.col-3.card .card-header {
+  background: url('https://images.unsplash.com/photo-1523057530100-383d7fbc77a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60') no-repeat center center / cover;
+}
+
+.col-4.card .card-header {
+  background: url('https://images.unsplash.com/photo-1494243762909-b498c7e440a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60') no-repeat center center / cover;
+}
+
+.col-5.card .card-header {
+  background: url('https://images.unsplash.com/photo-1483086431886-3590a88317fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60') no-repeat center center / cover;
+}
+
+.col-6.card .card-header {
+  background: url('https://images.unsplash.com/photo-1562163969-50acedf8bf22?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60') no-repeat center center / cover;
+}
+
+.card .card-body {
+  padding: 20px;
+}
+
+.card .card-body h2 {
+  margin-bottom: 5px;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* breakpoint */
+@media (max-width: 860px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+  .col-3, .col-6 {
+    margin-right: 0;
+  }
+  .col-4, .col-5, .col-6 {
+    margin-top: 25px;
+  }
+}
+
+/* breakpoint */
+@media (max-width: 680px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    margin: 0;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+}
+
+/* breakpoint */
+@media (max-width: 375px) {
+  .card {
+    max-width: 100%;
+  }
+}
