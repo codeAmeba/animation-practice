@@ -17,7 +17,7 @@ body {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  margin: auto;
+  margin: 45vh auto;
 }
 
 .icon span {
