@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion {
+  max-width: 400px;
+}
+
+.tab-heading {
+  text-align: center;
+  background: rgb(64, 122, 170);
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 0.6em;
+  cursor: pointer;
+}
+
+.tab-heading h2 {
+  pointer-events: none;
+}
+
+.tab-content {
+  background: rgb(236, 236, 236);
+  overflow-y: hidden;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.tab-content p {
+  margin: 20px;
+}
