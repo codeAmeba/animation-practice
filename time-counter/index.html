@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="timer">
+    00:00:00
+  </div>
+
+  <div class="input-wrapper">
+    <input type="time" class="input-timer" value="00:05" pattern="([1]?[0-9]|2[0-3]):[0-5][0-9]">
+    <button onclick="setCounter()" class="button-start">OK</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

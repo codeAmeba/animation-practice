@@ -1,0 +1,46 @@
+.input-timer {
+  width: 121px;
+  height: 30px;
+  background: #881238;
+  border: none;
+  border-bottom: 4px solid #660b28;
+  vertical-align: top;
+  margin-top: 2px;
+  padding-right: 8px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+}
+
+.input-timer::-webkit-datetime-edit-ampm-field {
+  display: none;
+}
+
+.input-wrapper {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+input:active {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.timer {
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 61px;
+  font-family: Arial, Helvetica, sans-serif;
+}
