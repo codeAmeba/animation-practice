@@ -1,6 +1,8 @@
 @import "nav.css";
 @import "banner.css";
 @import "feature.css";
+@import "location.css";
+@import "footer.css";
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -65,3 +67,8 @@ html {
   opacity: 0.9;
 }
 
+.copyright {
+	font-size: 0.8em;
+	margin-left: 20px;
+	padding-bottom: 30px;
+}

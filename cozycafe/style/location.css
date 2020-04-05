@@ -1,0 +1,48 @@
+.aside {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.aside h2 {
+  position: absolute;
+  padding-top: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+
+.aside .location-container {
+  background-image: url('../images/img-locations-background.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-container .location-items {
+  display: flex;
+}
+
+.location-item {
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.location-item:last-child {
+  opacity: 1;
+}
+
+.location-item h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
