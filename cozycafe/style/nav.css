@@ -1,0 +1,35 @@
+.nav {
+  height: 69px;
+  width: 100%;
+  border-bottom: 1px solid seashell;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  background-color: black;
+  z-index: 1;
+}
+
+.logo img {
+  height: 50px;
+  margin: 10px;
+}
+
+.nav-menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menus ul {
+  display: flex;
+}
+
+.menu {
+  padding: 0 10px;
+  display: flex;
+}
+
+.menu a {
+  color: seashell;
+}
