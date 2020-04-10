@@ -16,13 +16,13 @@ body {
   text-align: center;
 }
 
-.practice-item {
+.list-container a {
   font-size: 22px;
   transition: font-size 0.2s, font-weight 0.2s, color 0.2s;
   padding-right: 40px;
 }
 
-.practice-item:hover {
+.list-container a:hover {
   font-size: 1.8em;
   font-weight: 600;
   color: rgb(223, 18, 114);
@@ -36,7 +36,7 @@ body {
   justify-content: center;
 }
 
-.icons {
+.icon-container .icons {
   padding-left: 5px;
   font-size: 0.8em;
 }
@@ -53,14 +53,15 @@ i:hover {
   color: rgb(223, 18, 114);
 }
 
-.footer {
-  position: fixed;
+.footer .copyright {
+  position: relative;
   bottom: 0;
   width: 100%;
+  height: auto;
   margin: 5px auto;
 }
 
-.copyright {
+.copyright p {
   font-size: 0.8em;
   opacity: 0.4;
 }
