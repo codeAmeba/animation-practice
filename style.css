@@ -2,7 +2,6 @@
 
 * {
   box-sizing: border-box;
-  text-decoration: none;
   list-style: none;
   color: whitesmoke;
 }
@@ -19,7 +18,8 @@ body {
 .list-container a {
   font-size: 22px;
   transition: font-size 0.2s, font-weight 0.2s, color 0.2s;
-  padding-right: 40px;
+  padding-right: 20px;
+  text-decoration: none;
 }
 
 .list-container a:hover {
@@ -53,12 +53,16 @@ i:hover {
   color: rgb(223, 18, 114);
 }
 
+.footer {
+  margin-top: 100px;
+}
+
 .footer .copyright {
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  height: auto;
-  margin: 5px auto;
+  margin: 0 auto;
+  background-color: #2A2A2D;
 }
 
 .copyright p {
