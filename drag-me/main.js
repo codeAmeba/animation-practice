@@ -33,3 +33,6 @@ function dragElement(elmnt) {
 }
 
 dragElement(elmnt);
+
+// 그랩이 안 놓아짐
+// 수정할 것
