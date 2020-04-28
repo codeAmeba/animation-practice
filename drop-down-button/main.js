@@ -19,7 +19,7 @@ links.forEach((li) => {
 });
 
 text.addEventListener('click', (e) => {
-  let status = e.target.innerText.trim();
+  const status = e.target.innerText.trim();
   if (status === 'New') {
     alert('새 글을 추가하시겠습니까?');
   } else if (status === 'Delete') {
