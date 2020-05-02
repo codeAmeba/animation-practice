@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #303030;
+}
+
+.cat {
+  background: #303030;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  cursor: pointer;
+}
+
+.cat i {
+  font-size: 70px;
+  color: rgb(255, 19, 196);
+}
+
+.score-box {
+  margin: 15px;
+  font-size: 30px;
+  font-family: Helvetica;
+  color: #fff;
+}
+
+.score-box .current-score {
+  font-size: 40px;
+}
