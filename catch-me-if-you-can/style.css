@@ -28,11 +28,11 @@ body {
 
 .score-box {
   margin: 15px;
-  font-size: 30px;
+  font-size: 20px;
   font-family: Helvetica;
   color: #fff;
 }
 
 .score-box .current-score {
-  font-size: 40px;
+  font-size: 30px;
 }
