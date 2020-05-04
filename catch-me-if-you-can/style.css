@@ -19,6 +19,7 @@ body {
   left: 45%;
   top: 45%;
   cursor: pointer;
+  transition: all 1s;
 }
 
 .cat i {
