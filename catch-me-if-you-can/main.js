@@ -22,6 +22,7 @@ const getTop = () => {
 const movingBug = () => {
   let left = getLeft();
   let top = getTop();
+  bug.style.display = 'inline-block';
   bug.style.position = 'absolute';
   bug.style.left = left + 'vw';
   bug.style.top = top + 'vh';
