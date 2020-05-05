@@ -42,20 +42,19 @@ body {
 .ghost {
   /* background: #303030; */
   padding: 10px;
-  border-radius: 50%;
   cursor: pointer;
-  transition: all 1s;
+  transition: all 1s ease-in-out;
   display: none;
 }
 
 .ghost i {
-  font-size: 70px;
+  font-size: 10em;
   color: rgb(0, 238, 255);
 }
 
 .score-box {
   margin: 15px;
-  font-size: 20px;
+  font-size: 30px;
   font-family: Helvetica;
   color: #fff;
   position: fixed;
@@ -64,5 +63,5 @@ body {
 }
 
 .score-box .current-score {
-  font-size: 30px;
+  font-size: 40px;
 }

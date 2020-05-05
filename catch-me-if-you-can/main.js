@@ -5,7 +5,7 @@ const start = document.querySelector('.click-to-start');
 
 // 랜덤 숫자 반환
 const randomNum = () => {
-  return Math.floor(Math.random() * 90);
+  return Math.floor(Math.random() * 100);
 };
 
 // left 랜덤 값
@@ -37,23 +37,25 @@ start.addEventListener('click', (e) => {
 
 
 // 클릭당 10점 점수 기록
-let count = 0;
-ghost.addEventListener('click', () => {
-    count += 10;
-    score.innerText = count;
-    stageLevel();
-    return;
-});
+// let count = 0;
+// ghost.addEventListener('click', () => {
+//     count += 10;
+//     score.innerText = count;
+//     stageLevel();
+// });
 
-// 엉뚱한 곳을 클릭 시 감점
+// 엉뚱한 곳을 클릭 시 초기화
 document.querySelector('html').addEventListener('click', (e) => {
   let target = e.target.classList.value;
-  if (target !== 'fas fa-ghost') {
+  console.log(target);
+  if (target === 'fas fa-ghost') {
+    count += 10;
+    score.innerText = count;
+  } else {
     count = 0;
     score.innerText = count;
-    stageLevel();
   }
-  return;
+  stageLevel();
 });
 
 // 점수에 따른 감탄사
