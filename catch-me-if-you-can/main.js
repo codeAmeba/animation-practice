@@ -18,7 +18,7 @@ const getTop = () => {
   return randomNum();
 };
 
-// 고양이 아이콘 랜덤 이동
+// 버그 아이콘 랜덤 이동
 const movingBug = () => {
   let left = getLeft();
   let top = getTop();
@@ -27,11 +27,7 @@ const movingBug = () => {
   bug.style.top = top + 'vh';
 };
 
-// const easyLevel = setInterval(() => {
-//   movingCat();
-// }, 1000);
-
-
+// 알림창 클릭으로 시작
 start.addEventListener('click', (e) => {
   let target = e.target.parentNode.parentNode;
   target.remove();
@@ -47,7 +43,7 @@ bug.addEventListener('click', () => {
   return;
 });
 
-// 점수에 따른 레벨 변경
+// 점수에 따른 감탄사
 const stageLevel = () => {
   let currentScore = parseInt(score.innerText);
   if (currentScore >= 100 && currentScore < 200) {
