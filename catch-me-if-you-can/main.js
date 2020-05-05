@@ -1,6 +1,7 @@
 const cat = document.querySelector('.cat');
 const score = document.querySelector('.current-score');
 const level = document.querySelector('.current-level');
+const start = document.querySelector('.click-to-start');
 
 // 랜덤 숫자 반환
 const randomNum = () => {
@@ -29,23 +30,12 @@ const movingCat = () => {
 //   movingCat();
 // }, 1000);
 
-const speedLevel = () => {
-  if (level.innerText === 'EASY') {
-    let easyLevel = setInterval(() => {movingCat()}, 1000);
-  } else if (level.innerText === 'NORMAL') {
-    clearInterval(easyLevel);
-    let normalLevel = setInterval(() => {movingCat()}, 750);
-  } else if (level.innerText === 'NIGHTMARE') {
-    clearInterval(normalLevel);
-    let nightmareLevel = setInterval(() => {movingCat()}, 500);
-  } else if (level.innerText === 'HELL') {
-    clearInterval(nightmareLevel);
-    let hellLevel = setInterval(() => {movingCat()}, 250);
-  }
-  return;
-};
 
-// speedLevel();
+start.addEventListener('click', (e) => {
+  let target = e.target.parentNode.parentNode;
+  target.style.display = 'none';
+  setInterval(movingCat, 1000);
+});
 
 // 클릭당 10점 점수 기록
 let count = 0;
@@ -53,7 +43,6 @@ cat.addEventListener('click', () => {
   count += 10;
   score.innerHTML = count;
   stageLevel();
-  speedLevel();
   return;
 });
 
@@ -61,11 +50,13 @@ cat.addEventListener('click', () => {
 const stageLevel = () => {
   let currentScore = parseInt(score.innerText);
   if (currentScore >= 100 && currentScore < 200) {
-    level.innerText = 'NORMAL';
+    level.innerText = 'COOL';
   } else if (currentScore >= 200 && currentScore < 300) {
-    level.innerText = 'NIGHTMARE';
-  } else if (currentScore >= 300) {
-    level.innerText = 'HELL';
+    level.innerText = 'GOOD!';
+  } else if (currentScore >= 300 && currentScore < 500) {
+    level.innerText = 'GREAT!!';
+  } else if (currentScore >= 500) {
+    level.innerText = 'EXCELLENT!!!'
   }
   return;
 };

@@ -8,6 +8,31 @@ body {
   overflow: hidden;
 }
 
+.alert-window {
+  width: 400px;
+  height: 80px;
+  background: #fff;
+  color: #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 23%;
+  top: 45%;
+  z-index: 5;
+}
+
+.alert-window div {
+  margin: 5px;
+}
+
+.click-to-start {
+  padding: 2px 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
 .cat {
   /* background: #303030; */
   padding: 10px;
