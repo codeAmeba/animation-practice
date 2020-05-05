@@ -15,23 +15,27 @@ body {
 
 .alert-window {
   width: 400px;
-  height: 80px;
+  height: 120px;
   background: #fff;
   color: #303030;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 5;
 }
 
 .alert-window div {
   margin: 5px;
 }
 
+.alert-window p {
+  margin: 3px;
+}
+
 .click-to-start {
   padding: 2px 5px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #303030;
+  /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
   cursor: pointer;
 }
 

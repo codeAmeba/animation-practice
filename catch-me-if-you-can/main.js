@@ -35,19 +35,33 @@ start.addEventListener('click', (e) => {
   setInterval(movingGhost, 1000);
 });
 
+
 // 클릭당 10점 점수 기록
 let count = 0;
 ghost.addEventListener('click', () => {
-  count += 10;
-  score.innerHTML = count;
-  stageLevel();
+    count += 10;
+    score.innerText = count;
+    stageLevel();
+    return;
+});
+
+// 엉뚱한 곳을 클릭 시 감점
+document.querySelector('html').addEventListener('click', (e) => {
+  let target = e.target.classList.value;
+  if (target !== 'fas fa-ghost') {
+    count = 0;
+    score.innerText = count;
+    stageLevel();
+  }
   return;
 });
 
 // 점수에 따른 감탄사
 const stageLevel = () => {
   let currentScore = parseInt(score.innerText);
-  if (currentScore >= 100 && currentScore < 200) {
+  if (currentScore < 100) {
+    level.innerText = 'NOT BAD';
+  } else if (currentScore >= 100 && currentScore < 200) {
     level.innerText = 'COOL';
   } else if (currentScore >= 200 && currentScore < 300) {
     level.innerText = 'GOOD!';
@@ -58,4 +72,3 @@ const stageLevel = () => {
   }
   return;
 };
-
