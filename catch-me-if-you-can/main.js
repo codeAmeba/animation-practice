@@ -1,4 +1,4 @@
-const bug = document.querySelector('.bug');
+const ghost = document.querySelector('.ghost');
 const score = document.querySelector('.current-score');
 const level = document.querySelector('.current-level');
 const start = document.querySelector('.click-to-start');
@@ -19,25 +19,25 @@ const getTop = () => {
 };
 
 // 버그 아이콘 랜덤 이동
-const movingBug = () => {
+const movingGhost = () => {
   let left = getLeft();
   let top = getTop();
-  bug.style.display = 'inline-block';
-  bug.style.position = 'absolute';
-  bug.style.left = left + 'vw';
-  bug.style.top = top + 'vh';
+  ghost.style.display = 'inline-block';
+  ghost.style.position = 'absolute';
+  ghost.style.left = left + 'vw';
+  ghost.style.top = top + 'vh';
 };
 
 // 알림창 클릭으로 시작
 start.addEventListener('click', (e) => {
   let target = e.target.parentNode.parentNode;
   target.remove();
-  setInterval(movingBug, 1000);
+  setInterval(movingGhost, 1000);
 });
 
 // 클릭당 10점 점수 기록
 let count = 0;
-bug.addEventListener('click', () => {
+ghost.addEventListener('click', () => {
   count += 10;
   score.innerHTML = count;
   stageLevel();

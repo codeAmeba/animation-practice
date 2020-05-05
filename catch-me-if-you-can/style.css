@@ -35,7 +35,7 @@ body {
   cursor: pointer;
 }
 
-.bug {
+.ghost {
   /* background: #303030; */
   padding: 10px;
   border-radius: 50%;
@@ -44,9 +44,9 @@ body {
   display: none;
 }
 
-.bug i {
+.ghost i {
   font-size: 70px;
-  color: rgb(255, 19, 196);
+  color: rgb(0, 238, 255);
 }
 
 .score-box {
