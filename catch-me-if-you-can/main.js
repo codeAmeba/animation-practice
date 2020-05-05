@@ -1,4 +1,4 @@
-const cat = document.querySelector('.cat');
+const bug = document.querySelector('.bug');
 const score = document.querySelector('.current-score');
 const level = document.querySelector('.current-level');
 const start = document.querySelector('.click-to-start');
@@ -19,11 +19,12 @@ const getTop = () => {
 };
 
 // 고양이 아이콘 랜덤 이동
-const movingCat = () => {
+const movingBug = () => {
   let left = getLeft();
   let top = getTop();
-  cat.style.left = left + '%';
-  cat.style.top = top + '%';
+  bug.style.position = 'absolute';
+  bug.style.left = left + 'vw';
+  bug.style.top = top + 'vh';
 };
 
 // const easyLevel = setInterval(() => {
@@ -33,13 +34,13 @@ const movingCat = () => {
 
 start.addEventListener('click', (e) => {
   let target = e.target.parentNode.parentNode;
-  target.style.display = 'none';
-  setInterval(movingCat, 1000);
+  target.remove();
+  setInterval(movingBug, 1000);
 });
 
 // 클릭당 10점 점수 기록
 let count = 0;
-cat.addEventListener('click', () => {
+bug.addEventListener('click', () => {
   count += 10;
   score.innerHTML = count;
   stageLevel();
