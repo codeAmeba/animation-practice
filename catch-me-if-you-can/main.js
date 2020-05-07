@@ -18,22 +18,6 @@ const getTop = () => {
   return randomNum();
 };
 
-// 단계별 인터벌 -> 움직임만 복잡해지고 제대로 동작하지 않음
-// const getInterval = () => {
-//   let currentScore = parseInt(score.innerText);
-//   if (currentScore < 100) {
-//     return 1500;
-//   } else if (currentScore >= 100 && currentScore < 200) {
-//     return 1200;
-//   } else if (currentScore >= 200 && currentScore < 300) {
-//     return 1000;
-//   } else if (currentScore >= 300 && currentScore < 500) {
-//     return 800;
-//   } else if (currentScore >= 500) {
-//     return 500;
-//   }
-// };
-
 // 버그 아이콘 랜덤 이동
 const movingGhost = () => {
   let left = getLeft();
@@ -49,18 +33,11 @@ start.addEventListener('click', (e) => {
   ghost.style.display = 'inline-block';
   ghost.style.position = 'absolute';
   setInterval(movingGhost, 1000);
+  timeLimit();
 });
 
 
-// 클릭당 10점 점수 기록
-// let count = 0;
-// ghost.addEventListener('click', () => {
-//     count += 10;
-//     score.innerText = count;
-//     stageLevel();
-// });
-
-// 엉뚱한 곳을 클릭 시 초기화
+// 유령 클릭 시 10점, 엉뚱한 곳 클릭시 0점
 document.querySelector('html').addEventListener('click', (e) => {
   let target = e.target.classList.value;
   if (target === 'fas fa-ghost') {
@@ -73,7 +50,7 @@ document.querySelector('html').addEventListener('click', (e) => {
   stageLevel();
 });
 
-// 점수에 따른 감탄사
+// 점수에 따른 감탄사 변경
 const stageLevel = () => {
   let currentScore = parseInt(score.innerText);
   if (currentScore < 100) {
@@ -88,4 +65,18 @@ const stageLevel = () => {
     level.innerText = 'EXCELLENT!!!'
   }
   return;
+};
+
+// 제한 시간 카운트 다운
+const timeLimit = () => {
+  const time = document.querySelector('.time-limit');
+  let count = 60;
+  const countDown = setInterval(() => {
+    count -= 1;
+    time.innerText = count;
+    if (count === 0) {
+      clearInterval(countDown);
+    }
+  }, 1000);
+
 };
