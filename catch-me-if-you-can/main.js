@@ -28,7 +28,7 @@ const movingGhost = () => {
 
 // 알림창 클릭으로 시작
 start.addEventListener('click', (e) => {
-  let target = e.target.parentNode.parentNode;
+  const target = e.target.parentNode.parentNode;
   target.remove();
   ghost.style.display = 'inline-block';
   ghost.style.position = 'absolute';
@@ -39,7 +39,7 @@ start.addEventListener('click', (e) => {
 
 // 유령 클릭 시 10점, 엉뚱한 곳 클릭시 0점
 document.querySelector('html').addEventListener('click', (e) => {
-  let target = e.target.classList.value;
+  const target = e.target.classList.value;
   if (target === 'fas fa-ghost') {
     count += 10;
     score.innerText = count;
@@ -78,5 +78,4 @@ const timeLimit = () => {
       clearInterval(countDown);
     }
   }, 1000);
-
 };
