@@ -2,6 +2,7 @@ const ghost = document.querySelector('.ghost');
 const score = document.querySelector('.current-score');
 const level = document.querySelector('.current-level');
 const start = document.querySelector('.click-to-start');
+const time = document.querySelector('.time-limit');
 
 // 랜덤 숫자 반환
 const randomNum = () => {
@@ -43,7 +44,7 @@ document.querySelector('html').addEventListener('click', (e) => {
   if (target === 'fas fa-ghost') {
     count += 10;
     score.innerText = count;
-  } else {
+  } else if (target !== 'fas fa-ghost') {
     count = 0;
     score.innerText = count;
   }
@@ -69,7 +70,6 @@ const stageLevel = () => {
 
 // 제한 시간 카운트 다운
 const timeLimit = () => {
-  const time = document.querySelector('.time-limit');
   let count = 60;
   const countDown = setInterval(() => {
     count -= 1;
