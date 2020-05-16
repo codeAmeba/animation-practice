@@ -3,9 +3,8 @@ const hourHand = document.querySelector('.hour');
 const minHand = document.querySelector('.minute');
 const secHand = document.querySelector('.second');
 
-const now = new Date();
-
 const myClock = () => {
+  const now = new Date();
   let hour = now.getHours();
   let min = now.getMinutes();
   let sec = now.getSeconds();
