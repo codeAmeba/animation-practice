@@ -121,9 +121,16 @@
 
   <footer class="footer">
     <div class="copyright">
-      <p>&#169; 2020 Sooyoung Jeong</p>
+      <p>&copy; <span class="year"></span> codeAmeba</p>
     </div>
   </footer>
+
+  <script>
+    const yearEl = document.querySelector('.year');
+    const date = new Date();
+    const year = date.getFullYear();
+    yearEl.innerHTML = year;
+  </script>
 
 </body>
 </html>
