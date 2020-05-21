@@ -1,6 +1,6 @@
 const control = document.querySelector('.control');
 const display = document.querySelector('.display');
-const reset = document.querySelector('.reset');
+const resetBtn = document.querySelector('.reset');
 
 let min = 0;
 let sec = 0;
@@ -16,7 +16,7 @@ const start = () => {
     if (milSec === 100) {
       sec += 1;
       milSec = 0;
-    }
+    };
     if (sec === 60) {
       min += 1;
       sec = 0;
@@ -35,6 +35,11 @@ const stop = () => {
   clearInterval(interval);
 };
 
+const reset = () => {
+  isStart = false;
+  display.innerHTML = `0${min = 0}:0${sec = 0}:0${milSec = 0}`;
+}
+
 control.addEventListener('click', () => {
   if (isStart) {
     stop();
@@ -45,6 +50,6 @@ control.addEventListener('click', () => {
   }
 });
 
-reset.addEventListener('click', () => {
-  display.innerHTML = `0${min = 0}:0${sec = 0}:0${milSec = 0}`;
+resetBtn.addEventListener('click', () => {
+  reset();
 });
