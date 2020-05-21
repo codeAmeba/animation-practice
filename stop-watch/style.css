@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: ivory;
+}
+
+.stop-watch {
+	font-family: Helvetica;
+	text-align: center;
+	font-size: 4.3em;
+	padding: 30px;
+	letter-spacing: 0.08em;
+	opacity: 0.8;
+}
+
+.control,
+.reset {
+	width: 300px;
+	padding: 5px;
+	margin: 15px auto 0 auto;
+	font-size: 0.4em;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+	display: block;
+	background-color: ivory;
+	box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.5);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.control:hover,
+.reset:hover {
+	box-shadow: none;
+	transition: box-shadow 0.3s ease-in-out;
+}
