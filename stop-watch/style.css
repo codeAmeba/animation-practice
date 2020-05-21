@@ -33,11 +33,11 @@ body {
 	display: block;
 	background-color: ivory;
 	box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.5);
-	transition: box-shadow 0.3s ease-in-out;
+	transition: box-shadow 0.2s ease-in-out;
 }
 
-.control:hover,
+/* .control:hover,
 .reset:hover {
 	box-shadow: none;
 	transition: box-shadow 0.3s ease-in-out;
-}
+} */

@@ -38,9 +38,16 @@ const stop = () => {
 const reset = () => {
   isStart = false;
   display.innerHTML = `0${min = 0}:0${sec = 0}:0${milSec = 0}`;
-}
+};
 
-control.addEventListener('click', () => {
+control.addEventListener('mousedown', () => {
+  control.style.boxShadow = 'none';
+  control.style.transition = 'box-shadow 0.2s ease-in-out';
+});
+
+control.addEventListener('mouseup', () => {
+  control.style.boxShadow = '3px 5px 8px rgba(0, 0, 0, 0.5)';
+  control.style.transition = 'box-shadow 0.2s ease-in-out';
   if (isStart) {
     stop();
     control.innerHTML = 'START';
@@ -50,6 +57,13 @@ control.addEventListener('click', () => {
   }
 });
 
-resetBtn.addEventListener('click', () => {
+resetBtn.addEventListener('mousedown', () => {
+  resetBtn.style.boxShadow = 'none';
+  resetBtn.style.transition = 'box-shadow 0.2s ease-in-out';
+});
+
+resetBtn.addEventListener('mouseup', () => {
+  resetBtn.style.boxShadow = '3px 5px 8px rgba(0, 0, 0, 0.5)';
+  resetBtn.style.transition = 'box-shadow 0.2s ease-in-out';
   reset();
 });
