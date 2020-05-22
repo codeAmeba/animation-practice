@@ -35,21 +35,24 @@ start.addEventListener('click', (e) => {
   ghost.style.position = 'absolute';
   setInterval(movingGhost, 1000);
   timeLimit();
+  clickPoint();
 });
 
 
 // 유령 클릭 시 10점, 엉뚱한 곳 클릭시 0점
-document.querySelector('html').addEventListener('click', (e) => {
-  const target = e.target.classList.value;
-  if (target === 'fas fa-ghost') {
-    count += 10;
-    score.innerText = count;
-  } else if (target !== 'fas fa-ghost') {
-    count = 0;
-    score.innerText = count;
-  }
-  stageLevel();
-});
+const clickPoint = () => {document.querySelector('html').addEventListener('click', (e) => {
+    const target = e.target.classList.value;
+    if (target === 'fas fa-ghost') {
+      count += 10;
+      score.innerText = count;
+    } else if (target !== 'fas fa-ghost') {
+      count = 0;
+      score.innerText = count;
+    }
+    stageLevel();
+  });
+}
+
 
 // 점수에 따른 감탄사 변경
 const stageLevel = () => {
