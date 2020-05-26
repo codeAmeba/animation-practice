@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Display</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .block{
+      background-color: blue;
+      width: 150px;
+      height: 150px;
+      margin: 10px auto;
+    }
+    .inline {
+      background-color: green;
+      margin: 10px;
+
+    }
+    .inline-block {
+      display: inline-block;
+      background-color: red;
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+    }
+    .flex {
+      display: flex;
+      justify-content: center;
+    }
+    .flex div {
+      background-color: yellow;
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="block">I am block</div>
+  
+  <span class="inline">I am inline</span>
+
+  <div class="inline-block">I am inline-block</div>
+  <div class="inline-block">I am inline-block</div>
+
+  <div class="flex">
+    <div>I am flex</div>
+    <div>I am flex</div>
+    <div>I am flex</div>
+  </div>
+</body>
+</html>

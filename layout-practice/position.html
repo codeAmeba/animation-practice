@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Postion</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    div {
+      margin: 10px;
+      width: 150px;
+      height: 150px;
+    }
+    .static {
+      background-color: blue;
+      color: white;
+    }
+    .relative {
+      background-color: green;
+      position: relative;
+      left: 50%;
+    }
+    .fixed {
+      background-color: red;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+    .parent-of-absolute {
+      background-color: pink;
+      width: 500px;
+      height: 800px;
+      position: relative;
+    }
+    .absolute {
+      background-color: yellow;
+      position: absolute;
+      left: 0;
+      bottom: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="static">I am static</div>
+
+  <div class="relative">I am relative</div>
+
+  <div class="fixed">I am fixed</div>
+  
+  <div class="parent-of-absolute">
+    <div class="absolute">I am absolute</div>
+  </div>
+
+</body>
+</html>
