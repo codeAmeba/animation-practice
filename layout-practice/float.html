@@ -4,8 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Float</title>
+  <style>
+    h2 {
+      display: inline;
+      border-bottom: 3px solid black;
+    }
+
+    img {
+      width: 200px;
+    }
+
+   .container {
+      margin: 50px auto;
+    }
+
+    .first-article img {
+      float: left;
+      margin: 5px 10px 5px 0;
+    }
+
+    .second-article img {
+      float: right;
+      margin: 5px 0 10px 10px;
+    }
+
+    .box {
+      background-color: blue;
+      width: 100px;
+      height: 100px;
+      color: white;
+      float: left;
+      opacity: 0.5;
+    }
+
+    section {
+      background-color: green;
+      height: 50px;
+    }
+
+    .clearfix {
+      clear: both;
+    }
+
+    .header {
+      background-color: yellow;
+      height: 50px;
+    }
+    .main {
+      background-color: green;
+      height: 150px;
+      width: 70%;
+      float: left;
+    }
+    .nav {
+      background-color: red;
+      height: 150px;
+      width: 30%;
+      float: right;
+    }
+    .footer {
+      background-color: blue;
+      height: 50px;
+      color: white;
+    }
+
+
+  </style>
 </head>
 <body>
+  <h2>Normal float</h2>
+  <div class="container">
+    <div class="first-article">
+      <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fopenmatt.org%2Fwp-content%2Fuploads%2F2015%2F11%2Foctocat_kenobi.jpg&f=1&nofb=1" alt="octocat magician">
+      <p>
+        Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.
+        Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+      </p>
+    </div>
   
+    <div class="second-article">
+      <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fxaharts.org%2Ffunny%2Fi%2Fgitopuss%2Fgithub-octocat_yes-we-code.jpg&f=1&nofb=1" alt="octocat propaganda">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis.
+        Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+        Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+      </p>
+    </div>  
+  </div>
+
+  <h2>Float with clear</h2>
+  <div class="container">
+    <div class="box">I am float</div>
+    <section>I am not clear</section>
+  
+    <div class="box">I am float</div>
+    <section class="clearfix">I am clear</section>
+  </div>
+
+  <h2>for example</h2>
+  <div class="container">
+    <div class="header">I am header</div>
+    <div class="main">I am main</div>
+    <div class="nav">I am nav</div>
+    <div class="footer clearfix">I am footer</div>
+  </div>
 </body>
 </html>
