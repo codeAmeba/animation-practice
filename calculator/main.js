@@ -5,8 +5,9 @@ const clearBtn = document.querySelector('.clear');
 const resultBtn = document.querySelector('.result');
 const plusBtn =  document.querySelector('.plus');
 
-let beforeNumbers;
-let afterNumbers;
+let beforeNumbers = 0;
+let afterNumbers = 0;
+let totalBeforeNumbers = 0;
 
 // 클릭한 숫자 표시
 calcBtn.forEach((value) => {
@@ -19,16 +20,20 @@ calcBtn.forEach((value) => {
 // clear 버튼 활성화
 clearBtn.addEventListener('click', () => {
   textArea.innerText = '';
+  beforeNumbers = 0;
 });
 
 // plus 버튼 활성화
 plusBtn.addEventListener('click', () => {
   beforeNumbers = parseInt(textArea.innerText);
   textArea.innerText = '';
+  return;
 });
 
 // result 버튼 활성화(미완성)
 resultBtn.addEventListener('click', () => {
   afterNumbers = parseInt(textArea.innerText);
   textArea.innerText = beforeNumbers + afterNumbers;
+  return;
 });
+
