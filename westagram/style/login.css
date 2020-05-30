@@ -36,8 +36,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.input-email, 
-.input-password {
+input {
   width: 270px;
   height: 35px;
   background-color: #FAFAFA;
@@ -51,6 +50,9 @@ body {
 input::placeholder {
   opacity: 0.9;
 }
+input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
 .input-password {
   margin: 8px 0 16px 0;
 }
@@ -63,10 +65,13 @@ input::placeholder {
   border-radius: 4px;
   font-weight: 700;
   opacity: 0.3;
+  cursor: pointer;
+  outline: none;
 }
 .find-password {
   color: #385185;
   font-size: 0.8em;
   position: absolute;
   bottom: 20px;
+  cursor: pointer;
 }
