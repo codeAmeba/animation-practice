@@ -37,7 +37,12 @@
       alert('잘 기억해보세요^^');
     });
   };
-
   forgotPassword();
   
+  const updateCopyrightYear = () => {
+    const copyrightYear = document.querySelector('.copyright-year');
+    const currentYear = new Date().getFullYear();
+    copyrightYear.innerHTML = currentYear;
+  }
+  updateCopyrightYear();
 })();
