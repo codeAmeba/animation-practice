@@ -49,6 +49,7 @@ input {
 }
 input::placeholder {
   opacity: 0.9;
+  font-size: 0.9em;
 }
 input:focus {
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -65,7 +66,6 @@ input:focus {
   border-radius: 4px;
   font-weight: 700;
   opacity: 0.3;
-  cursor: pointer;
   outline: none;
 }
 .find-password {
