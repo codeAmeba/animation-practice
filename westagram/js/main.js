@@ -1,4 +1,5 @@
 (function() {
+
   const searchInput = document.querySelector('.search-input');
   const closeSearchInput = document.querySelector('.fa-times-circle');
   const searchPlaceholder = document.querySelector('.search-placeholder');
@@ -12,17 +13,31 @@
     searchPlaceholder.style.display = 'none';
   });
 
-  closeSearchInput.addEventListener('click', (e) => {
-    e.target.style.display = 'none';
-    searchPlaceholder.style.left = 95 + 'px';
-    searchPlaceholder.style.display = 'block';
-    searchIcon.style.left = 80 + 'px';
+  // searchInput.addEventListener('blur', (e) => {
+  //   movingPlaceholder();
+  //   e.target.addEventListener('change', (e) => {
+  //       searchPlaceholder.innerHTML = e.target.value;
+  //       searchPlaceholder.style.left = 95 + 'px';
+  //       searchIcon.style.left = 80 + 'px';
+  //       closeSearchInput.style.display = 'none';
+  //   });
+  // });
+
+  closeSearchInput.addEventListener('click', () => {
+    movingPlaceholder();
+    searchPlaceholder.innerHTML = '검색';
   });
 
   const movingPlaceholder = () => {
-    searchPlaceholder.style.left = 27 + 'px';
-    searchIcon.style.left = 10 + 'px';
-    closeSearchInput.style.display = 'block';
+    if (closeSearchInput.style.display === 'none') {
+      closeSearchInput.style.display = 'block';
+      searchPlaceholder.style.left = 27 + 'px';
+      searchIcon.style.left = 10 + 'px';
+    } else {
+      searchPlaceholder.style.left = 95 + 'px';
+      searchIcon.style.left = 80 + 'px';
+      closeSearchInput.style.display = 'none';
+    }
   };
 
 })();
