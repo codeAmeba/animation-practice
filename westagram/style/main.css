@@ -5,12 +5,18 @@ body {
   height: 53px;
   width: 100vw;
   background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   border-bottom: 0.8px solid rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  height: 53px;
+  width: 940px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 /* logo */
@@ -73,7 +79,6 @@ body {
 /* nav icons */
 .nav-icons-container {
   display: flex;
-  padding-right: 15px;
 }
 .nav-icons-container div {
   margin-left: 25px;
