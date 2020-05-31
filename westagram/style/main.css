@@ -4,6 +4,7 @@ body {
 .nav {
   height: 53px;
   width: 100vw;
+  padding: 0 19vw;
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -12,11 +13,9 @@ body {
 
 .nav-container {
   height: 53px;
-  width: 940px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 
 /* logo */
@@ -79,6 +78,7 @@ body {
 /* nav icons */
 .nav-icons-container {
   display: flex;
+  padding-right: 12px;
 }
 .nav-icons-container div {
   margin-left: 25px;
@@ -144,10 +144,16 @@ body {
 /* media query */
 @media only screen and (max-width: 560px) {
   .nav {
-    padding: 0 5vw;
+    padding: 0 32px;
   }
   .search-container {
     display: none;
+  }
+  .etc-info {
+    display: none;
+  }
+  .feed-area {
+    margin-left: 32px;
   }
 }
 
