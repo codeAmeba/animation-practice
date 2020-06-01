@@ -9,6 +9,7 @@
 
   const commentInput = document.querySelector('.input-comment');
   const commentUploadBtn = document.querySelector('.upload-comment');
+  const commentContainer = document.querySelector('.comment-container');
 
   searchInput.addEventListener('focus', () => {
     movingPlaceholder();
@@ -93,14 +94,23 @@
 
   const uploadingComment = () => {
 
-    let newComment = document.createElement('p');
-    const commentContainer = document.querySelector('.comment-container');
-
+    const commentWrapper = document.createElement('div');
+    let newComment = document.createElement('span');
+    const deleteComment = document.createElement('div');
+    
+    commentWrapper.classList.add('comment-wrapper');
     newComment.classList.add('comment');
-    commentContainer.appendChild(newComment);
+    deleteComment.classList.add('delete-comment');
 
+    commentWrapper.appendChild(newComment);
+    commentWrapper.appendChild(deleteComment);
+    commentContainer.appendChild(commentWrapper);
+
+    deleteComment.innerHTML = '삭제';
     newComment.innerHTML = commentInput.value;
   };
+
+
   
   const updateCopyrightYear = () => {
     const copyrightYear = document.querySelector('.copyright-year');

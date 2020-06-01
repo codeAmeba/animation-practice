@@ -274,12 +274,9 @@ body {
   font-size: 0.9em;
   font-weight: 600;
 }
-
-.text-wrapper .comment {
-  margin: 15px 0;
-  font-weight: 400;
+.text-wrapper > p {
+  margin-bottom: 20px;
 }
-
 
 .new-comment .input-comment {
   width: 100%;
@@ -289,7 +286,6 @@ body {
   outline: none;
   border: none;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
   padding: 0 20px;
   font-size: 0.9em;
 }
@@ -308,6 +304,23 @@ body {
   background: none;
   border: none;
   outline: none;
+}
+
+.text-wrapper .comment {
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+.text-wrapper .comment-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-wrapper .delete-comment {
+  font-weight: 400;
+  font-size: 0.8em;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
 }
 
 /* etc info */
