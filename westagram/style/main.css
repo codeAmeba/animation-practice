@@ -20,6 +20,10 @@ body {
 }
 
 /* logo */
+.logo-container {
+  padding-left: 30px;
+}
+
 .logo-container a {
   display: flex;
   align-items: center;
@@ -84,7 +88,7 @@ body {
 .nav-icons-container div {
   margin-left: 25px;
 }
-.nav-icons-container .home-icon{
+.nav-icons-container .home-icon {
   margin-right: 0;
 }
 .nav-icons-container i {
@@ -92,7 +96,7 @@ body {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.8);
 }
-.user-profile img{
+.user-profile img {
   height: 25px;
   border-radius: 50%;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
