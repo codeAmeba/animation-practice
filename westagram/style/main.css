@@ -247,6 +247,7 @@ body {
 .feed-text {
   min-height: 150px;
   max-height: fit-content;
+  padding-bottom: 55px;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom-left-radius: 3px;
@@ -275,9 +276,10 @@ body {
 }
 
 .text-wrapper .comment {
-  padding-top: 20px;
+  margin: 15px 0;
   font-weight: 400;
 }
+
 
 .new-comment .input-comment {
   width: 100%;
