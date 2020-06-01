@@ -7,6 +7,9 @@
   const feedImg = document.querySelector('.feed-img');
   const heartIcon = document.querySelector('.left-icons .fa-heart');
 
+  const commentInput = document.querySelector('.input-comment');
+  const commentUploadBtn = document.querySelector('.upload-comment');
+
   searchInput.addEventListener('focus', () => {
     movingPlaceholder();
   });
@@ -63,9 +66,42 @@
   heartIcon.addEventListener('click', () => {
     likeAnimation();
   });
+
+  commentInput.addEventListener('keyup', (e) => {
+
+    if (e.keyCode !== 13) {
+      checkComment();
+    } else if (e.keyCode === 13) {
+      uploadingComment();
+    }
+  });
+
+  commentUploadBtn.addEventListener('click', () => {
+    uploadingComment();
+  });
+
+  const checkComment = () => {
+    if (commentInput.value.length >= 1) {
+      commentUploadBtn.disabled = false;
+      commentUploadBtn.style.opacity = 1;
+      commentUploadBtn.style.cursor = 'pointer';
+    } else if (commentInput.value.length === 0) {
+      commentUploadBtn.disabled = true;
+      commentUploadBtn.style.opacity = 0.3;
+    }
+  };
+
+  const uploadingComment = () => {
+
+    let newComment = document.createElement('p');
+    const commentContainer = document.querySelector('.comment-container');
+
+    newComment.classList.add('comment');
+    commentContainer.appendChild(newComment);
+
+    newComment.innerHTML = commentInput.value;
+  };
   
-
-
   const updateCopyrightYear = () => {
     const copyrightYear = document.querySelector('.copyright-year');
     const currentYear = new Date().getFullYear();
