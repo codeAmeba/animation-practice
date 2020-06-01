@@ -30,4 +30,11 @@
     }
   };
 
+  const updateCopyrightYear = () => {
+    const copyrightYear = document.querySelector('.copyright-year');
+    const currentYear = new Date().getFullYear();
+    copyrightYear.innerHTML = currentYear;
+  };
+  updateCopyrightYear();
+
 })();
