@@ -13,16 +13,6 @@
     searchPlaceholder.style.display = 'none';
   });
 
-  // searchInput.addEventListener('blur', (e) => {
-  //   movingPlaceholder();
-  //   e.target.addEventListener('change', (e) => {
-  //       searchPlaceholder.innerHTML = e.target.value;
-  //       searchPlaceholder.style.left = 95 + 'px';
-  //       searchIcon.style.left = 80 + 'px';
-  //       closeSearchInput.style.display = 'none';
-  //   });
-  // });
-
   closeSearchInput.addEventListener('click', () => {
     movingPlaceholder();
     searchPlaceholder.innerHTML = '검색';

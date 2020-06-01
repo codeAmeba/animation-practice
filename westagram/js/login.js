@@ -20,7 +20,7 @@
   const checkInput = () => {
     const loginBtn = document.querySelector('.login-btn');
 
-    if (inputEmail.value.length >= 4 && inputPassword.value.length >= 8) {
+    if (inputEmail.value.length >= 1 && inputPassword.value.length >= 1) {
       loginBtn.disabled = false;
       loginBtn.style.opacity = 1;
       loginBtn.style.cursor = 'pointer';
@@ -30,19 +30,15 @@
     }
   };
 
-  const forgotPassword = () => {
-    const findPassword = document.querySelector('.find-password');
-
-    findPassword.addEventListener('click', () => {
-      alert('잘 기억해보세요^^');
-    });
-  };
-  forgotPassword();
+  document.querySelector('.find-password').addEventListener('click', () => {
+    alert('잘 기억해보세요^^');
+  });
   
   const updateCopyrightYear = () => {
     const copyrightYear = document.querySelector('.copyright-year');
     const currentYear = new Date().getFullYear();
     copyrightYear.innerHTML = currentYear;
-  }
+  };
   updateCopyrightYear();
+
 })();
